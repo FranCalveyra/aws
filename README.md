@@ -25,7 +25,7 @@ El curso incluye 14 clases que cubren los aspectos fundamentales de AWS:
 - **Clase 11**: DevOps en AWS - CodePipeline, CodeBuild
 - **Clase 12**: Seguridad avanzada en AWS
 - **Clase 13**: Arquitecturas de referencia y mejores prácticas
-- **Clase 15**: Planeamiento para desastres
+- **Clase 14**: Planeamiento para desastres
 
 ### Recursos Adicionales
 
@@ -53,7 +53,7 @@ aws/
 │   ├── Clase 11.md         # DevOps
 │   ├── Clase 12.md         # Seguridad
 │   ├── Clase 13.md         # Arquitecturas
-│   ├── Clase 15.md         # Disaster Recovery
+│   ├── Clase 14.md         # Disaster Recovery
 │   ├── CLI.md              # Guía de AWS CLI
 │   ├── images/             # Imágenes extraídas de las presentaciones
 │   ├── presentations/      # PDFs originales de las presentaciones

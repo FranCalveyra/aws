@@ -5,7 +5,6 @@ Esta guía te va a ayudar a configurar el entorno de desarrollo necesario para t
 ## Instalación de Dependencias
 
 ### 1. Rust (Requerido para mdBook)
-Al menos tiene que ser la versión 1.88 para que soporte `mermaid`
 
 #### En Linux/macOS:
 ```bash
@@ -27,13 +26,16 @@ cargo --version
 
 ### 2. mdBook
 
+**IMPORTANTE**: Instalar la versión 0.4.48 para compatibilidad con los plugins:
+
 ```bash
-cargo install mdbook
+cargo install mdbook --version 0.4.48
 ```
 
 #### Verificar instalación:
 ```bash
 mdbook --version
+# Debe mostrar: mdbook v0.4.48
 ```
 
 ### 3. mdbook-katex (Plugin para fórmulas matemáticas)
@@ -47,16 +49,27 @@ cargo install mdbook-katex
 mdbook-katex --version
 ```
 
-### 4. mdbook-mermaid (Plugin para fórmulas matemáticas)
+### 4. mdbook-mermaid (Plugin para diagramas)
+
+**IMPORTANTE**: Instalar la versión 0.14.0 para compatibilidad con mdbook 0.4.48:
 
 ```bash
-cargo install mdbook-mermaid
+cargo install mdbook-mermaid --version 0.14.0
 ```
 
 #### Verificar instalación:
 ```bash
 mdbook-mermaid --version
+# Debe mostrar: mdbook-mermaid 0.14.0
 ```
+
+#### Instalar assets de mermaid:
+Después de instalar mdbook-mermaid, ejecutar en el directorio del proyecto:
+```bash
+mdbook-mermaid install .
+```
+
+Este comando copia los archivos JavaScript necesarios (`mermaid.min.js` y `mermaid-init.js`) y actualiza la configuración en `book.toml`.
 
 ## Configuración del Proyecto
 
@@ -124,6 +137,18 @@ chmod +x ~/.cargo/bin/mdbook-katex
 - Asegurate de que mdbook-katex esté instalado
 - Verificá que las fórmulas estén en formato LaTeX correcto
 - Revisá la configuración en `book.toml`
+
+### Problemas con diagramas Mermaid
+- Verificá que mdbook-mermaid versión 0.14.0 esté instalado
+- Ejecutá `mdbook-mermaid install .` en el directorio del proyecto
+- Asegurate de que los archivos `mermaid.min.js` y `mermaid-init.js` existan en el directorio raíz
+- Los diagramas se renderizan en el navegador (client-side), no necesitan herramientas externas
+
+### Incompatibilidades de versiones
+Si ves errores como "Unable to parse the input" o advertencias sobre versiones de mdbook:
+- Asegurate de usar mdbook 0.4.48: `cargo install mdbook --version 0.4.48 --force`
+- Asegurate de usar mdbook-mermaid 0.14.0: `cargo install mdbook-mermaid --version 0.14.0 --force`
+- Reinstalá los assets: `mdbook-mermaid install .`
 
 ## Configuración Avanzada
 

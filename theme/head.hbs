@@ -1,0 +1,32 @@
+{{!-- Custom head additions --}}
+<script>
+(function() {
+    function setFavicon() {
+        // Remove all existing favicon links
+        var links = document.querySelectorAll("link[rel*='icon']");
+        links.forEach(function(link) { link.remove(); });
+        
+        // Add our favicon.ico as the last favicon link
+        var link = document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'icon';
+        link.href = '{{ path_to_root }}favicon.ico';
+        document.getElementsByTagName('head')[0].appendChild(link);
+        
+        var shortcut = document.createElement('link');
+        shortcut.type = 'image/x-icon';
+        shortcut.rel = 'shortcut icon';
+        shortcut.href = '{{ path_to_root }}favicon.ico';
+        document.getElementsByTagName('head')[0].appendChild(shortcut);
+    }
+    
+    // Run immediately and also after DOM loads
+    setFavicon();
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setFavicon);
+    }
+    // Also run after a short delay to catch any late additions
+    setTimeout(setFavicon, 100);
+})();
+</script>
+

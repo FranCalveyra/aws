@@ -1,13 +1,13 @@
 # Summary
 
-[Introducción](../README.md)
+[Introducción a la materia](../README.md)
 
 # Clases
 
-- [Clase 1](./Clase%201.md)
-- [Clase 2](./Clase%202.md)
-- [Clase 3](./Clase%203.md)
-- [Clase 4](./Clase%204.md)
+- [Introducción a la nube](./Clase%201.md)
+- [Seguridad & IAM](./Clase%202.md)
+- [Almacenamiento](./Clase%203.md)
+- [Servicios de cómputo](./Clase%204.md)
 - [Clase 5](./Clase%205.md)
 - [Clase 6](./Clase%206.md)
 - [Clase 7](./Clase%207.md)
