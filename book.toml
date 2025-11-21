@@ -9,6 +9,7 @@ renderers = ["html"]
 
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
+renderers = ["html"]
 
 [output.html]
 theme = "theme"
