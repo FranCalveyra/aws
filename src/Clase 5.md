@@ -221,7 +221,7 @@ La opción a elegir depende del caso de negocio:
 * **Timestream**: es necesario identificar tendencias y patrones en el tiempo para tomar decisiones. Por ejemplo, para analizar datos de sensores IoT, para monitorear métricas de salud, de uso, de tráfico de red, etc.
 * **QLDB**: se requiere guardar datos para auditoria y compliance. Mediante una base de datos *ledger*, se obtienen garantías de inmutabilidad y verificación criptográfica, aunque con un overhead de tiempo de ejecución. Sirve, por ejemplo, para guardar transacciones bancarias, para registrar el estado de los lotes de un producto, etc.
 
-## Migración de datos a AWS
+## AWS DMS
 <img src="./images/Clase%205/dms-logo.png" align="right" width="150" style="margin-left: 15px;">
 
 * Servicio de migraciones y replicación gestionado por AWS
