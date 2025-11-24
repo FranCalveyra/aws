@@ -155,28 +155,41 @@ Ejemplos
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "AllowAccess",
       "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::123456789012:user/SpecificUser"
+      },
       "Action": [
-        "dynamoDB:*",
+        "dynamodb:*",
         "s3:*"
       ],
       "Resource": [
-        "arn:aws:dynamodb:region:account-numberwithout-hyphens:table/course-notes",
+        "arn:aws:dynamodb:region:123456789012:table/course-notes",
         "arn:aws:s3:::course-notes-web",
         "arn:aws:s3:::course-notes-mp3/*"
       ]
     },
     {
+      "Sid": "DenyOthers",
       "Effect": "Deny",
+      "Principal": {
+        "AWS": "*"
+      },
       "Action": [
         "dynamodb:*",
         "s3:*"
       ],
       "NotResource": [
-        "arn:aws:dynamodb:region:account-number-withouthyphens:table/course-notes",
+        "arn:aws:dynamodb:region:123456789012:table/course-notes",
         "arn:aws:s3:::course-notes-web",
         "arn:aws:s3:::course-notes-mp3/*"
-      ]
+      ],
+      "Condition": {
+        "StringNotLike": {
+          "aws:PrincipalArn": "arn:aws:iam::123456789012:user/SpecificUser"
+        }
+      }
     }
   ]
 }
