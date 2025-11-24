@@ -220,4 +220,4 @@ flowchart LR
 
 > A partir de acá el PPT es completamente autodescriptivo. Adjunto el pdf embebido (lean a partir de la slide 20):
 
-<embed src="https://github.com/FranCalveyra/aws/blob/main/src/presentations/Nube%20con%20AWS%20-%20Clase%2014.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="./presentations/Nube%20con%20AWS%20-%20Clase%2014.pdf" type="application/pdf" width="100%" height="600px" />

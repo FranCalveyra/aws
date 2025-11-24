@@ -150,7 +150,7 @@ Ejemplos:
 
 > Acá pone unas cuántas imágenes de ejemplo de cómo configurar distintos casos, que la verdad que no lo veo necesario de incluir (ver slides 30-36 del siguiente pdf)
 
-<embed src="https://github.com/FranCalveyra/aws/blob/main/src/presentations/Nube%20con%20AWS%20-%20Clase%206.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="./presentations/Nube%20con%20AWS%20-%20Clase%206.pdf" type="application/pdf" width="100%" height="600px" />
 
 - Los recursos de VPC pueden acceder a los servicios administrados de AWS mediante endpoints de VPC.
 - Un endpoint utiliza AWS PrivateLink para acceder a los servicios administrados de AWS. Esto genera costos y presenta limitaciones de rendimiento.

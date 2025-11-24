@@ -20,4 +20,4 @@
 > Te puede llegar a interesar que tenés SDKs para cada uno, o que soportan un cierto tamaño de mensajes, sumado al caso de uso particular de cada uno.\
 > No le dedicaría una clase entera, les adjunto el PDF:
 
-<embed src="https://github.com/FranCalveyra/aws/blob/main/src/presentations/Nube%20con%20AWS%20-%20Clase%2012.pdf" type="application/pdf" width="100%" height="600px" />
+<embed src="./presentations/Nube%20con%20AWS%20-%20Clase%2012.pdf" type="application/pdf" width="100%" height="600px" />

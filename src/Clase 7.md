@@ -156,4 +156,4 @@ flowchart TB
 
 > A partir de acá, ver PPT desde la slide 21
 
-<embed src="https://github.com/FranCalveyra/aws/blob/main/src/presentations/Nube%20con%20AWS%20-%20Clase%207.pdf" width="100%" height="600px" />
+<embed src="./presentations/Nube%20con%20AWS%20-%20Clase%207.pdf" width="100%" height="600px" />
