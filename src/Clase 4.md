@@ -354,12 +354,23 @@ flowchart LR
 ```mermaid
 flowchart LR
 
-%% === Best practice ===
-    A1["Web server A<br/>Original user data"]
-    A2["Web server A<br/>New user data"]
-    A3["New web server<br/>Instance initialization is correct"]
+    %% Nodes
+    A1["**Web server A**<br/>Original user data"]
+    
+    %% The split step
+    Step1["Manually run additional commands<br/>to configure instance"]
+    Step2["Update user data<br/>(Configuration synchronized)"]
+    
+    A2["**Web server A**<br/>New user data"]
+    A3["**New Web Server**<br/>Instance initialization is CORRECT"]
 
-    A1 -->|"Manually run additional commands to configure instance<br/>User data is updated"| A2
+    %% Connections
+    A1 --> Step1
+    A1 --> Step2
+    
+    Step1 --> A2
+    Step2 --> A2
+    
     A2 -->|"Copy user data"| A3
 ```
 
@@ -368,13 +379,24 @@ flowchart LR
 ```mermaid
 flowchart LR
 
-%% === Not best practice ===
-    B1["Web server B<br/>Original user data"]
-    B2["Web server B<br/>Original user data"]
-    B3["New web server<br/>Instance initialization is not correct"]
+    %% Nodes
+    A1["**Web server B**<br/>Original user data"]
+    
+    %% The split step
+    Step1["Manually run additional commands<br/>to configure instance"]
+    Step2["Skip user data update<br/>(Configuration is not synchronized)"]
+    
+    A2["**Web server B**<br/>Original data"]
+    A3["**New Web Server**<br/>Instance initialization is INCORRECT"]
 
-    B1 -->|"Manually run additional commands to configure instance<br/>User data is not updated"| B2
-    B2 -->|"Copy user data"| B3
+    %% Connections
+    A1 --> Step1
+    A1 --> Step2
+    
+    Step1 --> A2
+    Step2 --> A2
+    
+    A2 -->|"Copy user data"| A3
 ```
 
 
